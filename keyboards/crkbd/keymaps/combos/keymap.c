@@ -35,35 +35,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LCTL,    SE_Z,    SE_X,    SE_C,    SE_V,    SE_B,                         SE_N,    SE_M, SE_COMM,  SE_DOT, SE_MINS, KC_LGUI,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LSFT,  KC_SPC,   MO(3),      MO(4), KC_BSPC, KC_LALT
+                                          KC_LSFT,  KC_SPC,   MO(1),      MO(2), KC_BSPC, KC_LALT
                                       //`--------------------------'  `--------------------------'
   ),
 
-  [1] = LAYOUT_split_3x6_3( // COLEMAK DH
-  //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      XXXXXXX,    SE_Q,    SE_W,    SE_F,    SE_P,    SE_B,                         SE_J,    SE_L,    SE_U,    SE_Y, SE_QUOT, XXXXXXX,
-  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX,    SE_A,    SE_R,    SE_S,    SE_T,    SE_G,                         SE_M,    SE_N,    SE_E,    SE_I,    SE_O, XXXXXXX,
-  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX,    SE_Z,    SE_X,    SE_C,    SE_D,    SE_V,                         SE_K,    SE_H, SE_COMM,  SE_DOT, SE_SLSH,   DF(0),
-  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          XXXXXXX,  KC_SPC,   MO(3),      MO(4), KC_LSFT, XXXXXXX
-                                      //`--------------------------'  `--------------------------'
-  ),
-
-  [2] = LAYOUT_split_3x6_3( // Gaming layer
-  //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-       KC_TAB,    SE_Q,    SE_W,    SE_E,    SE_R,    SE_T,                         SE_Y,    SE_U,    SE_I,    SE_O,   SE_P,  SE_LBRC,
-  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LCTL,    SE_A,    SE_S,    SE_D,    SE_F,    SE_G,                         SE_H,    SE_J,    SE_K,    SE_L, SE_QUOT, SE_SCLN,
-  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LSFT,    SE_Z,    SE_X,    SE_C,    SE_V,    SE_B,                         SE_N,    SE_M, SE_COMM,  SE_DOT, SE_SLSH,   DF(0),
-  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          XXXXXXX,  KC_SPC,   MO(4),      MO(4), KC_LSFT, XXXXXXX
-                                      //`--------------------------'  `--------------------------'
-  ),
-
-  [3] = LAYOUT_split_3x6_3(
+  [1] = LAYOUT_split_3x6_3( //Numpad
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       ALT_TAB, XXXXXXX,    SE_7,    SE_8,    SE_9, XXXXXXX,                      SE_CIRC, SE_AMPR, SE_DQUO, SE_PIPE, SE_BSLS, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
@@ -71,11 +47,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+---------+-------+--------|
       KC_LCTL,    SE_0,    SE_1,    SE_2,    SE_3, XXXXXXX,                      XXXXXXX, SE_RPRN, SE_RCBR, SE_RBRC, SE_RABK, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LSFT,  KC_SPC, _______,      MO(5), KC_BSPC, XXXXXXX
+                                          KC_LSFT,  KC_SPC, _______,      MO(3), KC_BSPC, XXXXXXX
                                       //`--------------------------'  `--------------------------'
   ),
 
-  [4] = LAYOUT_split_3x6_3(
+  [2] = LAYOUT_split_3x6_3( //Symbols
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       XXXXXXX,   SE_AT, SE_HASH,  SE_DLR, SE_PERC, SE_AMPR,                      SE_EXLM, SE_ARNG, SE_ADIA, SE_ODIA, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
@@ -83,23 +59,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      SE_SLSH, SE_DQUO, SE_UNDS,  XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LSFT,  KC_SPC,   MO(5),    _______, KC_BSPC, XXXXXXX
+                                          KC_LSFT,  KC_SPC,   MO(3),    _______, KC_BSPC, XXXXXXX
                                       //`--------------------------'  `--------------------------'
   ),
 
-  [5] = LAYOUT_split_3x6_3(
+  [3] = LAYOUT_split_3x6_3( //Arrows
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       XXXXXXX, KC_RGUI, KC_RCTL, KC_RALT,  KC_TAB, KC_RSFT,                      KC_RSFT,  KC_TAB, KC_RALT, KC_RCTL, KC_RGUI, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_LEFT, KC_DOWN,   KC_UP,KC_RIGHT, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        MO(6), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        MO(4), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           XXXXXXX,  KC_SPC, _______,    _______, KC_BSPC, XXXXXXX
                                       //`--------------------------'  `--------------------------'
   ),
 
-  [6] = LAYOUT_split_3x6_3(
+  [4] = LAYOUT_split_3x6_3( //Function keys
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       XXXXXXX, XXXXXXX,   KC_F7,   KC_F8,   KC_F9,  KC_F10,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
@@ -113,22 +89,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 };
 
-// combos on qwerty
+// combos
 const uint16_t PROGMEM combo_qwerty_escape[] = {KC_TAB, SE_Q,  SE_W, COMBO_END};
-//const uint16_t PROGMEM combo_qwerty_enter[]  = {SE_J, SE_K,    SE_L, COMBO_END};
-//const uint16_t PROGMEM combo_qwerty_delete[] = {SE_M, SE_COMM,       COMBO_END};
-// combos on colemak
-const uint16_t PROGMEM combo_colemak_escape[] = {SE_W, SE_F,    SE_P, COMBO_END};
-const uint16_t PROGMEM combo_colemak_enter[]  = {SE_N, SE_E,    SE_I, COMBO_END};
-const uint16_t PROGMEM combo_colemak_delete[] = {SE_H, SE_COMM,       COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
-  COMBO(combo_qwerty_escape,     KC_ESC),
-  //COMBO(combo_qwerty_enter,      KC_ENT),
-  //COMBO(combo_qwerty_delete,     KC_DEL),
-  COMBO(combo_colemak_escape,     KC_ESC),
-  COMBO(combo_colemak_enter,      KC_ENT),
-  COMBO(combo_colemak_delete,     KC_DEL),
+  COMBO(combo_qwerty_escape,     KC_ESC)
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
